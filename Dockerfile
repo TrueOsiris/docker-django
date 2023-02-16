@@ -15,8 +15,8 @@ RUN apt-get update && \
       apache2-utils \
       libapache2-mod-wsgi-py3 && \
     apt-get clean && \
-    pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 80
 CMD [ "apache2ctl","-D","FOREGROUND" ]
 #CMD [ "python", "/app/start.py" ]
