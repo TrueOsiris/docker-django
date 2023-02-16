@@ -10,6 +10,9 @@ RUN apt-get update && \
       python3 \
       python3-pip \
       python3-venv \
+      python3-dev \
+      default-libmysqlclient-dev \
+      build-essential \
       apache2 \
       apache2-dev \
       apache2-utils \
