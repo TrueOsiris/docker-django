@@ -1,3 +1,3 @@
 #!/bin/bash
-apachectl -D 
+apache2ctl start
 tail -f /dev/null
