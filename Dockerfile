@@ -7,6 +7,7 @@ COPY start.sh /start.sh
 COPY . .
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      vim \
       python3 \
       python3-pip \
       python3-venv \
