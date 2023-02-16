@@ -1,2 +1,3 @@
 #!/bin/bash
-apachectl -D FOREGROUND
+apachectl -D 
+tail -f /dev/null
