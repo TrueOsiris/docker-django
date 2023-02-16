@@ -8,3 +8,7 @@ spyne==2.14.0
 sqlparse==0.4.3
 suds-py3==1.4.5.0
 python-dateutil==2.8.2
+mod-wsgi
+django-filter
+markdown
+psycopg2-binary
