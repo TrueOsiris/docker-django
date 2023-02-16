@@ -1,9 +1,9 @@
 FROM ubuntu:22.10
 ENV PYTHONUNBUFFERED 1
-ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 VOLUME [ "/app" ]
 COPY requirements.txt ./
+COPY start.sh /start.sh
 COPY . .
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
@@ -16,10 +16,14 @@ RUN apt-get update && \
       apache2 \
       apache2-dev \
       apache2-utils \
-      libapache2-mod-wsgi-py3 && \
+      libapache2-mod-wsgi-py3 \
+      php \
+      libapache2-mod-php \
+      php-mysql && \
     apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
     pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+RUN chmod +x ./start.sh
 EXPOSE 80
-CMD [ "apache2ctl","-D","FOREGROUND" ]
-#CMD [ "python", "/app/start.py" ]
+CMD [ "/start.sh" ]
