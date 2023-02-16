@@ -11,7 +11,7 @@ RUN apt-get update && \
       apache2 \
       apache2-dev \
       apache2-utils \
-      libapache2-mod-wsgi && \
+      libapache2-mod-wsgi-py3 && \
     apt-get clean && \
     pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
