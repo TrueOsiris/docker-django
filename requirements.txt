@@ -2,7 +2,7 @@ django==4.1.7
 djangorestframework==3.14.0
 asgiref==3.6
 lxml==4.9.2
-mysqlclient==2.1.1
+mysqlclient
 pytz==2022.7.1
 spyne==2.14.0
 sqlparse==0.4.3
