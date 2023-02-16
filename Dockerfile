@@ -4,7 +4,5 @@ WORKDIR /app
 VOLUME [ "/app" ]
 COPY requirements.txt ./
 COPY . .
-RUN pip install --no-cache-dir -r requirements.txt
-RUN adduser -D user
-USER user
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 CMD [ "python", "/app/start.py" ]
