@@ -23,6 +23,8 @@ RUN apt-get update && \
       libapache2-mod-php \
       php-mysql && \
     apt-get clean && \
+    apt-get autoremove -y && \
+    apt-get autoclean -y && \
     rm -rf /var/lib/apt/lists/* && \
     pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
