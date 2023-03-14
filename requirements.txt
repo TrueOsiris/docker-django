@@ -1,5 +1,6 @@
 django==4.1.7
 djangorestframework==3.14.0
+django-soap
 asgiref==3.6
 lxml==4.9.2
 mysqlclient
