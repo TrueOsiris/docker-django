@@ -13,3 +13,5 @@ mod-wsgi
 django-filter
 markdown
 psycopg2-binary
+virtualenv
+
