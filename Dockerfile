@@ -21,6 +21,7 @@ RUN apt-get update && \
       libapache2-mod-wsgi-py3 \
       php \
       libapache2-mod-php \
+      logrotate \
       php-mysql && \
     apt-get clean && \
     apt-get autoremove -y && \
