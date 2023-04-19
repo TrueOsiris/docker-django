@@ -1,2 +1,2 @@
 # docker-django
-python container with django
+python container with django baseimage
